@@ -29,34 +29,17 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-gray-50 dark:bg-gray-950">
-        <header className="border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
-          <nav className="max-w-4xl mx-auto px-6 py-4 flex items-center gap-8">
-            <Link
-              href="/"
-              className="font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Course Catalog
+        <header className="bg-white border-b border-slate-200">
+          <nav className="flex gap-4 px-6 py-4 border-b border-slate-200">
+            <Link href="/" className="px-3 py-2 rounded-md hover:bg-slate-100">
+              Home
             </Link>
-            <div className="flex items-center gap-6 ml-auto">
-              <Link
-                href="/"
-                className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                href="/courses"
-                className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                Courses
-              </Link>
-              <Link
-                href="/about"
-                className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                About
-              </Link>
-            </div>
+            <Link href="/courses" className="px-3 py-2 rounded-md hover:bg-slate-100">
+              Courses
+            </Link>
+            <Link href="/about" className="px-3 py-2 rounded-md hover:bg-slate-100">
+              About
+            </Link>
           </nav>
         </header>
         <div className="flex flex-col flex-1">{children}</div>
